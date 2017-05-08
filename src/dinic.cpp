@@ -38,10 +38,18 @@ public :
     void addEdge(int u, int v, int C)
     {
         // Forward edge : 0 flow and C capacity
-        Edge a{v, 0, C, adj[v].size()};
+        Edge a;
+        a.v = v;
+        a.flow = 0;
+        a.C = C;
+        a.rev = adj[v].size();
 
         // Back edge : 0 flow and 0 capacity
-        Edge b{u, 0, 0, adj[u].size()};
+        Edge b;
+        b.v = u;
+        b.flow = 0;
+        b.C = 0;
+        b.rev = adj[u].size();
 
         adj[u].push_back(a);
         adj[v].push_back(b); // reverse edge
