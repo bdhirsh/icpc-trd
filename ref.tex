@@ -41,6 +41,7 @@
 \newcommand{\SECTION}[2]{\section*{#1} \addcontentsline{toc}{subsection}{#1} #2 \begin{center}\rule{400pt}{0.25pt}\end{center}}
 \newcommand{\sourcefile}[1]{\lstinputlisting{src/#1}}
 \newcommand{\Csourcefile}[1]{\lstinputlisting[language=C++]{src/#1.cpp}}
+\newcommand{\Cnotppsourcefile}[1]{\lstinputlisting[language=C++]{src/#1.c}}
 \newcommand{\Psourcefile}[1]{\lstinputlisting[language=Python]{src/#1.py}}
 %\begin{center}\textbf{#1.cpp}\end{center}
 
@@ -130,6 +131,10 @@
 
 \SECTION{Link cut tree} {
   \Csourcefile{\detokenize{link-cut}}
+}
+
+\SECTION{Hungarian algorithm} {
+  \Cnotppsourcefile{\detokenize{hungarian/hungarian}}
 }
 
 

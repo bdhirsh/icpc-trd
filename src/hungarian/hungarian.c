@@ -27,6 +27,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "hungarian.h"
+/*
+typedef struct {
+  int num_rows;
+  int num_cols;
+  int** cost;
+  int** assignment;  
+} hungarian_problem_t;
+ */
 
 #define INF (0x7FFFFFFF)
 #define verbose (0)
